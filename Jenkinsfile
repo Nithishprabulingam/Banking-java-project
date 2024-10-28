@@ -7,23 +7,23 @@ pipeline{
                  echo 'github url checkout'
             }
         }
-        stage('codecompile with akshat'){
+        stage('codecompile with nithish'){
             steps{
                 echo 'starting compiling'
                 sh 'mvn compile'
             }
         }
-        stage('codetesting with akshat'){
+        stage('codetesting with nithish'){
             steps{
                 sh 'mvn test'
             }
         }
-        stage('qa with akshat'){
+        stage('qa with nithish'){
             steps{
                 sh 'mvn checkstyle:checkstyle'
             }
         }
-        stage('package with akshat'){
+        stage('package with nithish'){
             steps{
                 sh 'mvn package'
             }
@@ -35,7 +35,7 @@ pipeline{
          }
         stage('port expose'){
             steps{
-                sh 'docker run -dt -p 8091:8091 --name c000 myimg1'
+                sh 'docker run -dt -p 8091:8091 --name c001 myimg1'
             }
         }   
     }
