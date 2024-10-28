@@ -35,7 +35,8 @@ pipeline{
          }
         stage('port expose'){
             steps{
-                sh 'docker run -dt -p 8091:8091 --name c001 myimg1'
+                        sh 'docker run -dt -p 8091:8091 --name c001 myimg' // Correct image name
+
             }
         }   
     }
